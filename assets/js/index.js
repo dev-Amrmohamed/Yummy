@@ -39,13 +39,13 @@ function displayMeals(arr) {
     items[i].addEventListener("click", function () {
       let mealId = this.getAttribute("data-id");
       console.log("Meal ID:", mealId);
-      window.location.href = "../../pages/meal.html?id=" + mealId;
+      window.location.href = "/Yummy/pages/meal.html?id=" + mealId;
     });
   }
 }
 
 if (performance.getEntriesByType("navigation")[0].type === "reload") {
-  window.location.href = "../../index.html";
+  window.location.href = "/Yummy/index.html";
 }
 
 function showLoader() {

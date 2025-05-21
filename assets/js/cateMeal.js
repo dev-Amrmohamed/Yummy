@@ -35,7 +35,7 @@ function displaycateMeal(cateData) {
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () {
       let mealId = this.getAttribute("data-id");
-      window.location.href = `meal.html?id=${mealId}`;
+      window.location.href = `/Yummy/meal.html?id=${mealId}`;
     });
   }
 }

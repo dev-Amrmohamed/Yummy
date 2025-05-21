@@ -28,7 +28,7 @@ function displayAreas(areas) {
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () {
       let areaName = this.getAttribute("data-name");
-      window.location.href = `areaMeal.html?a=${areaName}`;
+      window.location.href = `/Yummy/areaMeal.html?a=${areaName}`;
     });
   }
 }

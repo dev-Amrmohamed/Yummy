@@ -31,7 +31,7 @@ function displayIngredList(data) {
     items[i].addEventListener("click", function () {
       let mealId = this.getAttribute("data-id");
       console.log("Meal ID:", mealId);
-      window.location.href = `../../pages/meal.html?id=${mealId}`;
+      window.location.href = `/Yummy/pages/meal.html?id=${mealId}`;
     });
   }
 }

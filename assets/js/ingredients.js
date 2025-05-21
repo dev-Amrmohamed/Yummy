@@ -29,7 +29,7 @@ function displayAreas(areas) {
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () {
       let ingredName = this.getAttribute("data-name");
-      window.location.href = `ingredList.html?i=${ingredName}`;
+      window.location.href = `/Yummy/ingredList.html?i=${ingredName}`;
     });
   }
 }

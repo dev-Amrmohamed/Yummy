@@ -31,7 +31,7 @@ function displayCate(dataCate) {
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () {
       let CateName = this.getAttribute("data-name");
-      window.location.href = `cateMeal.html?id=${CateName}`;
+      window.location.href = `/Yummy/cateMeal.html?id=${CateName}`;
     });
   }
 }
