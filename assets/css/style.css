@@ -1,0 +1,90 @@
+body {
+  font-family: "Comic Relief", system-ui;
+  background-color: #0d0d0d;
+  color: #ffffff;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  cursor: pointer;
+}
+
+svg {
+  cursor: pointer;
+}
+
+aside {
+  width: 60px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  color: black;
+  transition: all 1s;
+}
+
+.categories {
+  width: 265px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  transform: translateX(-101%);
+  transition: all 1s;
+}
+.categories a {
+  width: 100%;
+}
+
+.categories ul li {
+  padding: 10px 0;
+}
+svg.fa-bars,
+svg.fa-times {
+  font-size: 30px;
+}
+
+.btns {
+  transition: all 1s;
+}
+
+.active {
+  color: black;
+  background-color: #ffffff;
+  width: 100%;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  padding-inline: 10px !important;
+}
+
+main {
+  width: calc(100% - 70px);
+  margin-left: auto;
+}
+.item {
+  cursor: pointer;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  background-color: #f9f6f6ca;
+  transition: all 0.5s ease;
+}
+
+.item:hover .overlay {
+  top: 0;
+}
+
+.nav-inputs input::placeholder {
+  color: rgba(255, 255, 255, 0.411) !important;
+}
+
+.fa-home,
+.fa-utensils {
+  font-size: 70px;
+}

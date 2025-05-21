@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/image/logo.png" type="image/x-icon" />
+
+    <!--* font-awesome -->
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+    <!--* bootstrap -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <!--* core-style -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Yummy-1</title>
+  </head>
+  <body>
+        <!--& SPINER  -->
+    <div id="loader" class="position-fixed z-3 top-0 start-0 end-0 bottom-0 bg-black d-flex justify-content-center align-items-center d-none">
+        <i class="fas fa-spinner fa-spin fa-5x"></i>
+      </div>
+    </div>
+    <!--& ASIDE -->
+    <aside class="d-flex flex-column justify-content-between text-center py-4 z-2">
+      <div>
+        <img src="../assets/image/logo.png" class="w-75" alt="" />
+      </div>
+
+      <div>
+        <span class="open"><i class="fas fa-bars"></i></span>
+        <span class="close d-none"><i class="fas fa-times"></i></span>
+      </div>
+
+      <div class="text-center">
+        <i class="fas fa-globe"></i>
+        <i class="fas fa-share-alt"></i>
+      </div>
+    </aside>
+
+    <!--& CATEGORIES -->
+    <div class="categories d-flex flex-column justify-content-between p-4 z-2">
+      <div class="btns">
+        <ul class="list-unstyled overflow-hidden">
+          <li>
+            <a href="search.html">Search</a>
+          </li>
+          <li>
+            <a href="categories.html">Categories</a>
+          </li>
+          <li>
+            <a href="area.html">Area</a>
+          </li>
+          <li>
+            <a href="ingredients.html">Ingredients</a>
+          </li>
+          <li>
+            <a href="contactus.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="social">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-globe"></i>
+        <p>Copyright Â© 2019 All Rights Reserved.</p>
+      </div>
+    </div>
+
+    <!--& MAIN  -->
+    <main class="py-5 px-4 z-0">
+      <div class="container">
+            <div class="row">
+                  <div class="contact vh-100 d-flex justify-content-center align-content-center align-items-center">
+                    <div class="container text-center">
+                      <div class="row gy-3">
+                        <div class="col-md-6">
+                          <input type="text" placeholder="Enter Your Name" id="name" class="form-control">
+                          <p class="alert nameAlert alert-danger w-100 mt-2 d-none">Special characters and numbers not allowed</p>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="email" placeholder="Enter Your Email" id="email" class="form-control">
+                          <p class="alert emailAlert alert-danger w-100 mt-2 d-none">Email not valid *exemple@yyy.zzz</p>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="text" placeholder="Enter Your Phone" id="phone" class="form-control">
+                          <p class="alert phoneAlert alert-danger w-100 mt-2 d-none">Enter valid Phone Number</p>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="number" placeholder="Enter Your Age" id="age" class="form-control">
+                          <p class="alert ageAlert alert-danger w-100 mt-2 d-none">Enter valid Age (16+)</p>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="password" placeholder="Enter Your Password" id="pass" class="form-control">
+                          <p class="alert passwordAlert alert-danger w-100 mt-2 d-none">Enter valid password *Minimum eight characters, at least one letter and one number:*</p>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="password" placeholder="Confirm Password" id="repass" class="form-control">
+                          <p class="alert conPasswordAlert alert-danger w-100 mt-2 d-none">Dont Match</p>
+                        </div>
+                      </div>
+                      
+                      <p id="signupValid" class="alert alert-success w-50 mx-auto mt-4 d-none">✅ Registered Successfully!</p>
+                      <button id="submitBtn"  class="btn btn-outline-danger px-3 mt-4">Submit</button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../assets/js/all.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/contact.js"></script>
+  </body>
+</html>
