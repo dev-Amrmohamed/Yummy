@@ -1,5 +1,7 @@
+redirectIfMissing("id");
 //* HTML elements
 let cateBox = document.querySelector("#cate-box");
+let loader = document.querySelector("#loader");
 //^ Global variables
 //# Functions
 async function getCategories() {
@@ -20,7 +22,7 @@ function displayCate(dataCate) {
               <img src="${dataCate[i].strCategoryThumb}" class="w-100" />
               <div class="overlay overflow-hiding p-2 position-absolute text-center text-black text-capitalize d-flex flex-column align-items-center justify-content-center">
                 <h3 class="">${dataCate[i].strCategory}</h3>
-                <p class="cate-desc m-0">${dataCate[i].strCategoryDescription.slice(0, 70)}</p>
+                <p class="cate-desc m-0">${dataCate[i].strCategoryDescription.split(" ").slice(0, 10).join(" ")}</p>
               </div>
             </div>
           </div>
@@ -31,7 +33,7 @@ function displayCate(dataCate) {
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () {
       let CateName = this.getAttribute("data-name");
-      window.location.href = `/Yummy/cateMeal.html?id=${CateName}`;
+      window.location.href = getBasePath() + "pages/cateMeal.html?id=" + CateName;
     });
   }
 }

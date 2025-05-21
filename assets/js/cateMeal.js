@@ -1,5 +1,7 @@
+redirectIfMissing("id");
 //* HTML elements
 let cateMealBox = document.querySelector("#cateMealRow");
+let loader = document.querySelector("#loader");
 //^ Global variables
 let params = new URLSearchParams(window.location.search);
 let cate1 = params.get("id");
@@ -35,7 +37,7 @@ function displaycateMeal(cateData) {
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () {
       let mealId = this.getAttribute("data-id");
-      window.location.href = `/Yummy/meal.html?id=${mealId}`;
+      window.location.href = getBasePath() + "pages/meal.html?id=" + mealId;
     });
   }
 }

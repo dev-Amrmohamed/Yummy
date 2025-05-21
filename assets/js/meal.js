@@ -1,7 +1,9 @@
+redirectIfMissing("id");
 //* HTML elements
 let mealBox = document.querySelector("#meal-row");
 let params = new URLSearchParams(window.location.search);
 let mealId = params.get("id");
+let loader = document.querySelector("#loader");
 
 //# Functions
 async function getMeal() {
@@ -76,8 +78,8 @@ function displayMeal(data) {
                   ${getTags(data)}
               </ul>
               <div class="d-flex gap-2">
-                <button class="btn btn-success px-4"><a href="${data.strSource}">Source</a></button>
-                <button class="btn btn-danger px-4"><a href="${data.strYoutube}">Youtube</a></button>
+                <button class="btn btn-success px-4"><a href="${data.strSource ? `<a href="${data.strSource}" target="_blank">Source</a>` : ""}">Source</a></button>
+                <button class="btn btn-danger px-4"><a href="${data.strYoutube ? `<a href="${data.strYoutube}" target="_blank">YouTube</a>` : ""}">Youtube</a></button>
               </div>
 
           </div>

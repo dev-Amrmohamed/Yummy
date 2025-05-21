@@ -6,6 +6,7 @@ let aside = document.querySelector("aside");
 let btns = document.querySelector(".btns");
 let btnsLinks = document.querySelectorAll("ul li a");
 let mainBox = document.querySelector("#myRow");
+let loader = document.querySelector("#loader");
 //^ Global variables
 
 //# Functions
@@ -13,7 +14,6 @@ async function getMales() {
   showLoader();
   let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=`);
   let data = await response.json();
-  // console.log(data.meals);
   displayMeals(data.meals);
   hideLoader();
 }
@@ -38,14 +38,10 @@ function displayMeals(arr) {
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () {
       let mealId = this.getAttribute("data-id");
-      console.log("Meal ID:", mealId);
-      window.location.href = "/Yummy/pages/meal.html?id=" + mealId;
+      // window.location.href = "../../pages/meal.html?id=" + mealId;
+      window.location.href = getBasePath() + "pages/meal.html?id=" + mealId;
     });
   }
-}
-
-if (performance.getEntriesByType("navigation")[0].type === "reload") {
-  window.location.href = "/Yummy/index.html";
 }
 
 function showLoader() {

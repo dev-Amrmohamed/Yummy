@@ -1,7 +1,8 @@
+redirectIfMissing("id");
 let areaMealBox = document.querySelector("#areaMealRow");
 let paramsAreaMeal = new URLSearchParams(window.location.search);
-let areaName = params.get("a");
-console.log(areaName);
+let areaName = paramsAreaMeal.get("a");
+let loader = document.querySelector("#loader");
 
 async function getAreaMeal() {
   showLoader();
@@ -31,7 +32,7 @@ function displayAreaMeal(areaNameData) {
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () {
       let mealId = this.getAttribute("data-name");
-      window.location.href = `/Yummy/meal.html?id=${mealId}`;
+      window.location.href = getBasePath() + "pages/meal.html?id=" + mealId;
     });
   }
 }

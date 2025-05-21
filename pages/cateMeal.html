@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Meals by selected category." />
+    <meta property="og:title" content="Yummy - Meals by Category" />
+    <meta property="og:image" content="../assets/image/logo.png" />
+    <meta property="og:description" content="Browse meals filtered by category." />
+
+    <!--* site-icon  -->
     <link rel="shortcut icon" href="../assets/image/logo.png" type="image/x-icon" />
     <!--* font-awesome -->
     <link rel="stylesheet" href="../assets/css/all.min.css" />
@@ -13,10 +19,9 @@
     <title>Yummy-1</title>
   </head>
   <body>
-        <!--& SPINER  -->
+    <!--& SPINER  -->
     <div id="loader" class="position-fixed z-3 top-0 start-0 end-0 bottom-0 bg-black d-flex justify-content-center align-items-center d-none">
-        <i class="fas fa-spinner fa-spin fa-5x"></i>
-      </div>
+      <i class="fas fa-spinner fa-spin fa-5x"></i>
     </div>
     <!--& ASIDE -->
     <aside class="d-flex flex-column justify-content-between text-center py-4 z-2">
@@ -40,19 +45,19 @@
       <div class="btns">
         <ul class="list-unstyled overflow-hidden">
           <li>
-            <a href="pages/search.html">Search</a>
+            <a href="./pages/search.html">Search</a>
           </li>
           <li>
-            <a href="pages/categories.html">Categories</a>
+            <a href="./pages/categories.html">Categories</a>
           </li>
           <li>
-            <a href="pages/area.html">Area</a>
+            <a href="./pages/area.html">Area</a>
           </li>
           <li>
-            <a href="pages/ingredients.html">Ingredients</a>
+            <a href="./pages/ingredients.html">Ingredients</a>
           </li>
           <li>
-            <a href="pages/contactus.html">Contact Us</a>
+            <a href="./pages/contactus.html">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -67,13 +72,14 @@
 
     <!--& MAIN  -->
     <main class="py-5 px-4 z-0">
-      <div class="cotainer">
+      <div class="container">
         <div class="row mx-5" id="cateMealRow"></div>
       </div>
     </main>
 
     <script src="../assets/js/all.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/utils.js"></script>
     <script src="../assets/js/cateMeal.js"></script>
     <script src="../assets/js/index.js"></script>
   </body>

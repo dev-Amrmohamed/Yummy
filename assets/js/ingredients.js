@@ -1,5 +1,6 @@
 //* HTML elements
 let ingredientsRow = document.querySelector("#ingredientsRow");
+let loader = document.querySelector("#loader");
 //^ Global variables
 //# Functions
 async function getAllAreas() {
@@ -19,7 +20,7 @@ function displayAreas(areas) {
                       <div class="item text-center position-relative overflow-hidden rounded-2" data-name="${areas[i].strIngredient}">
                         <i class="fas fa-utensils"></i>
                         <h3 class="pt-3">${areas[i].strIngredient}</h3>
-                        <p class="pt-3">${areas[i].strDescription ? areas[i].strDescription.slice(0, 85) : "there is no des"}</p>
+                        <p class="pt-3">${areas[i].strDescription ? areas[i].strDescription.split(" ").slice(0, 10).join(" ") : "there is no des"}</p>
                       </div>
                   </div>
     `;
@@ -29,7 +30,7 @@ function displayAreas(areas) {
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () {
       let ingredName = this.getAttribute("data-name");
-      window.location.href = `/Yummy/ingredList.html?i=${ingredName}`;
+      window.location.href = getBasePath() + "pages/ingredList.html?i=" + ingredName;
     });
   }
 }

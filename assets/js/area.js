@@ -1,5 +1,6 @@
 //* HTML elements
 let areaRow = document.querySelector("#areaRow");
+let loader = document.querySelector("#loader");
 //^ Global variables
 //# Functions
 async function getAllAreas() {
@@ -28,7 +29,7 @@ function displayAreas(areas) {
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () {
       let areaName = this.getAttribute("data-name");
-      window.location.href = `/Yummy/areaMeal.html?a=${areaName}`;
+      window.location.href = getBasePath() + "pages/areaMeal.html?a=" + areaName;
     });
   }
 }

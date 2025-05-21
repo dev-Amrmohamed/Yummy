@@ -1,6 +1,8 @@
+redirectIfMissing("i");
 let params = new URLSearchParams(window.location.search);
 let ingredValue = params.get("i");
 let ingredListBox = document.querySelector("#ingredListRow");
+let loader = document.querySelector("#loader");
 
 async function showIngredList() {
   showLoader();
@@ -31,7 +33,7 @@ function displayIngredList(data) {
     items[i].addEventListener("click", function () {
       let mealId = this.getAttribute("data-id");
       console.log("Meal ID:", mealId);
-      window.location.href = `/Yummy/pages/meal.html?id=${mealId}`;
+      window.location.href = getBasePath() + "pages/meal.html?id=" + mealId;
     });
   }
 }
